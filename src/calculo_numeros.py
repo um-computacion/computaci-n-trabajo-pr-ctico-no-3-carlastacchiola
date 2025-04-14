@@ -1,4 +1,8 @@
-from .exceptions import NumeroDebeSerPositivo
+try: 
+    from .exceptions import NumeroDebeSerPositivo
+except ImportError:
+    from exceptions import  NumeroDebeSerPositivo
+
 def ingrese_numero():
     try:
         entrada = input("Ingrese un número: ")
